@@ -35,6 +35,7 @@ export default {
   border-radius: var(--border-radius);
   background: var(--button-bg);
   vertical-align: middle;
+  line-height: var(--font-size);
   &:hover {
     border-color: var(--border-color-hover);
   }
