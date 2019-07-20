@@ -1,7 +1,13 @@
 <template>
   <button class="v-button">
     <v-icon
-      v-if="icon"
+      v-if="loading"
+      name="loading"
+      class="loading"
+      :style="{order: iconPosition && iconPosition==='right' ?  2: 0}"
+    ></v-icon>
+    <v-icon
+      v-else-if="icon"
       :style="{order: iconPosition && iconPosition==='right' ?  2: 0}"
       :name="icon"
     />
@@ -14,7 +20,11 @@ export default {
   components: {
     VIcon
   },
+
   props: {
+    loading: {
+      type: Boolean
+    },
     icon: {
       type: String
     },
