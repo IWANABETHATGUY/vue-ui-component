@@ -1,0 +1,24 @@
+{
+  "name": "vue-ui-component",
+  "version": "1.0.0",
+  "description": "vue-ui 组件库",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IWANABETHATGUY/vue-ui-component.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "hxj <974153916@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IWANABETHATGUY/vue-ui-component/issues"
+  },
+  "homepage": "https://github.com/IWANABETHATGUY/vue-ui-component#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
