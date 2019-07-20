@@ -1,13 +1,19 @@
 <template>
   <button class="v-button">
-    <svg class="icon" v-if="icon" :style="{order: iconPosition && iconPosition==='right' ?  2: 0}">
-      <use :xlink:href="`#i-${icon}`" />
-    </svg>
+    <v-icon
+      v-if="icon"
+      :style="{order: iconPosition && iconPosition==='right' ?  2: 0}"
+      :name="icon"
+    />
     <slot></slot>
   </button>
 </template>
 <script>
+import VIcon from '../icon/Icon.vue';
 export default {
+  components: {
+    VIcon
+  },
   props: {
     icon: {
       type: String
@@ -25,6 +31,14 @@ export default {
 };
 </script>
 <style lang="scss">
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .v-button {
   display: inline-flex;
   justify-content: center;
@@ -44,6 +58,9 @@ export default {
   }
   &:focus {
     outline: none;
+  }
+  .loading {
+    animation: spin 1s infinite linear;
   }
 }
 </style>
