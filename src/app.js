@@ -1,7 +1,7 @@
 import Vue from 'vue';
-import Button from './button/Button.vue';
-
-Vue.component('v-button', Button);
+import App from './App.vue';
 new Vue({
-  el: '#app',
-});
+  render: h => {
+    return h(App);
+  }
+}).$mount('#app');
