@@ -18,26 +18,26 @@
 import VIcon from '../icon/Icon.vue';
 export default {
   components: {
-    VIcon
+    VIcon,
   },
 
   props: {
     loading: {
-      type: Boolean
+      type: Boolean,
     },
     icon: {
-      type: String
+      type: String,
     },
     step: {
-      type: Number
+      type: Number,
     },
     iconPosition: {
       type: String,
       validator(value) {
         return ['left', 'right'].includes(value);
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 <style lang="scss">

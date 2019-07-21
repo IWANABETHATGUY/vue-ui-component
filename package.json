@@ -1,8 +1,8 @@
 {
   "name": "vue-ui-component",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "vue-ui 组件库",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "serve": "webpack-dev-server --config ./build/webpack.dev.config.js",
     "build": "webpack --config ./build/webpack.prod.config.js",

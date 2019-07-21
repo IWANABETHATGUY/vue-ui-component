@@ -33,10 +33,10 @@ describe('v-button', () => {
     const wrapper = mount(VButton, {
       propsData: { icon: 'setting', 'icon-position': 'right' }
     });
-
     const vm = wrapper.vm;
     const svg = vm.$el.querySelector('svg');
     const { order } = window.getComputedStyle(svg);
     expect(order).toBe('2');
+    
   });
 });
