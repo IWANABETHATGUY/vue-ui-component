@@ -12,7 +12,7 @@ describe('v-button', () => {
   });
   test('should replace original icon if loading is true', () => {
     const wrapper = mount(VButton, {
-      propsData: { icon: 'setting', loading: true }
+      propsData: { icon: 'setting', loading: true },
     });
 
     const vm = wrapper.vm;
@@ -31,12 +31,12 @@ describe('v-button', () => {
 
   test('icon svg order should be 2 if iconPosition is right', () => {
     const wrapper = mount(VButton, {
-      propsData: { icon: 'setting', 'icon-position': 'right' }
+      propsData: { icon: 'setting', 'icon-position': 'right' },
     });
+
     const vm = wrapper.vm;
     const svg = vm.$el.querySelector('svg');
     const { order } = window.getComputedStyle(svg);
     expect(order).toBe('2');
-    
   });
 });
