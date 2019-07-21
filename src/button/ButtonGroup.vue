@@ -14,11 +14,11 @@ export default {
         console.warn(`g-button 的子元素需要都是button, 而你写的是${name}`);
       }
     }
-  }
+  },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .v-button-group {
   display: inline-flex;
   vertical-align: middle;

@@ -7,12 +7,12 @@
 <script>
 export default {
   props: {
-    name: { type: String }
-  }
+    name: { type: String },
+  },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .v-icon {
   height: 1em;
   width: 1em;
