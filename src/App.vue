@@ -14,7 +14,7 @@
     <div class="box">
       <v-input value="张三" disabled />
       <v-input value="李四" readonly />
-      <v-input value="麻子" />
+      <v-input value="麻子" @change="onChange" />
     </div>
     <div class="box">
       <v-input value="王二" error="error" />
@@ -34,6 +34,9 @@ export default {
   methods: {
     send() {
       this.state = !this.state;
+    },
+    onChange(e) {
+      console.log(e.target.value);
     },
   },
   components: {
