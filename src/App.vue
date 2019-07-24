@@ -14,7 +14,8 @@
     <div class="box">
       <v-input value="张三" disabled />
       <v-input value="李四" readonly />
-      <v-input value="麻子" @change="onChange" />
+      <v-input v-model="text" />
+      <div>{{text}}</div>
     </div>
     <div class="box">
       <v-input value="王二" error="error" />
@@ -29,6 +30,7 @@ export default {
   data() {
     return {
       state: false,
+      text: '',
     };
   },
   methods: {
