@@ -20,11 +20,37 @@
     <div class="box">
       <v-input value="王二" error="error" />
     </div>
+    <v-row>
+      <v-col >fuck</v-col>
+      <v-col >off</v-col>
+    </v-row>
+    <v-row>
+      <v-col :span="6">fuck</v-col>
+      <v-col :span="6">fuck</v-col>
+      <v-col :span="6">fuck</v-col>
+      <v-col :span="6">fuck</v-col>
+    </v-row>
+    <v-row>
+      <v-col :span="4"></v-col>
+      <v-col :span="4"></v-col>
+      <v-col :span="4"></v-col>
+      <v-col :span="4"></v-col>
+      <v-col :span="4"></v-col>
+      <v-col :span="4"></v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
-import { VButton, VButtonGroup, VIcon, RegisterIcon, VInput } from './index';
+import {
+  VButton,
+  VButtonGroup,
+  VIcon,
+  RegisterIcon,
+  VInput,
+  VRow,
+  VCol,
+} from './index';
 RegisterIcon('//at.alicdn.com/t/font_1306426_z33pcj1yenp.js');
 export default {
   data() {
@@ -46,6 +72,8 @@ export default {
     VIcon,
     VButtonGroup,
     VInput,
+    VRow,
+    VCol,
   },
 };
 </script>
