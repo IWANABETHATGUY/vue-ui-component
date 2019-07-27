@@ -27,8 +27,7 @@
     <v-row>
       <v-col :span="6">fuck</v-col>
       <v-col :span="6">fuck</v-col>
-      <v-col :span="6">fuck</v-col>
-      <v-col :span="6">fuck</v-col>
+      <v-col :span="6" offset="3">fuck</v-col>
     </v-row>
     <v-row>
       <v-col :span="4"></v-col>
