@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="col"
-    :class="{['col-'+span]: span, ['offset-'+offset]: offset}"
-    :style="{paddingLeft: gutter/2+ 'px', paddingRight: gutter/2 +'px'}"
-  >
+  <div class="col" :class="colClass" :style="colStyle">
     <div style="border:1px solid green;height: 100%;">
       <slot></slot>
     </div>
@@ -27,6 +23,21 @@ export default {
       type: [Number, String],
     },
   },
+  computed: {
+    colStyle() {
+      return {
+        paddingLeft: this.gutter / 2 + 'px',
+        paddingRight: this.gutter / 2 + 'px',
+      };
+    },
+    colClass() {
+      const { offset, span } = this;
+      return {
+        ['col-' + span]: span,
+        ['offset-' + offset]: offset,
+      };
+    },
+  },
 };
 </script>
 
@@ -36,6 +47,7 @@ export default {
   $offset-prefix: offset-;
   height: 100px;
   width: 50%;
+  // border: 1px solid
   @for $i from 1 through 24 {
     &.#{$class-prefix}#{$i} {
       width: ($i / 24) * 100%;

@@ -20,13 +20,13 @@
     <div class="box">
       <v-input value="王二" error="error" />
     </div>
-    <v-row :gutter="20">
+    <v-row :gutter="30">
       <v-col :span="6">fuck</v-col>
       <v-col :span="6">fuck</v-col>
       <v-col :span="6">fuck</v-col>
       <v-col :span="6">fuck</v-col>
     </v-row>
-    <v-row>
+    <v-row :gutter="30">
       <v-col :span="4"></v-col>
       <v-col :span="4"></v-col>
       <v-col :span="4"></v-col>
