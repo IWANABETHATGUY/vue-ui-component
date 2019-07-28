@@ -5,4 +5,15 @@ import VInput from './input/Input.vue';
 import RegisterIcon from './icon/IconCreater';
 import VRow from './grid/row.vue';
 import VCol from './grid/col.vue';
-export { VButton, VButtonGroup, VIcon, RegisterIcon, VInput, VRow, VCol };
+import VToast from './toast';
+
+export {
+  VButton,
+  VButtonGroup,
+  VIcon,
+  RegisterIcon,
+  VInput,
+  VRow,
+  VCol,
+  VToast,
+};

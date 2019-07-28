@@ -49,6 +49,14 @@ import {
 } from './index';
 RegisterIcon('//at.alicdn.com/t/font_1306426_z33pcj1yenp.js');
 export default {
+  components: {
+    VButton,
+    VIcon,
+    VButtonGroup,
+    VInput,
+    VRow,
+    VCol,
+  },
   data() {
     return {
       state: false,
@@ -63,13 +71,8 @@ export default {
       console.log(e.target.value);
     },
   },
-  components: {
-    VButton,
-    VIcon,
-    VButtonGroup,
-    VInput,
-    VRow,
-    VCol,
+  mounted() {
+    this.$toast('fuck that');
   },
 };
 </script>
