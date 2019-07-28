@@ -1,19 +1,32 @@
 <template>
-  <div class="col" :class="{['col-'+span]: span, ['offset-'+offset]: offset}" ></div>
+  <div
+    class="col"
+    :class="{['col-'+span]: span, ['offset-'+offset]: offset}"
+    :style="{paddingLeft: gutter/2+ 'px', paddingRight: gutter/2 +'px'}"
+  >
+    <div style="border:1px solid green;height: 100%;">
+      <slot></slot>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'VCol',
+  data() {
+    return {
+      gutter: 0,
+    };
+  },
   props: {
     span: {
       type: [Number, String],
-      default: 0
+      default: 0,
     },
     offset: {
-      type: [Number, String]
-    }
-  }
+      type: [Number, String],
+    },
+  },
 };
 </script>
 
@@ -22,9 +35,7 @@ export default {
   $class-prefix: col-;
   $offset-prefix: offset-;
   height: 100px;
-  background: grey;
   width: 50%;
-  border: 1px solid red;
   @for $i from 1 through 24 {
     &.#{$class-prefix}#{$i} {
       width: ($i / 24) * 100%;

@@ -20,14 +20,11 @@
     <div class="box">
       <v-input value="王二" error="error" />
     </div>
-    <v-row>
-      <v-col >fuck</v-col>
-      <v-col >off</v-col>
-    </v-row>
-    <v-row>
+    <v-row :gutter="20">
       <v-col :span="6">fuck</v-col>
       <v-col :span="6">fuck</v-col>
-      <v-col :span="6" offset="3">fuck</v-col>
+      <v-col :span="6">fuck</v-col>
+      <v-col :span="6">fuck</v-col>
     </v-row>
     <v-row>
       <v-col :span="4"></v-col>
