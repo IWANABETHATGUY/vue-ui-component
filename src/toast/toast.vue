@@ -1,6 +1,7 @@
 <template>
   <div class="toast">
-    <div v-html="$slots.default[0]"></div>
+    <slot v-if="!enableHTML"></slot>
+    <div v-else v-html="$slots.default[0]"></div>
     <div class="line"></div>
     <span class="close-button" v-if="closeButton" @click="closeButtonCallback">{{closeButton.text}}</span>
   </div>
@@ -16,6 +17,10 @@ export default {
     autoCloseDelay: {
       type: Number,
       default: 1000,
+    },
+    enableHTML: {
+      type: Boolean,
+      default: false,
     },
     closeButton: {
       type: Object,
@@ -72,7 +77,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
     display: inline-block;
     width: 1px;
     height: 100%;
-    background: red;
+    background: #666;
     margin: 0 8px;
   }
   .close-button {

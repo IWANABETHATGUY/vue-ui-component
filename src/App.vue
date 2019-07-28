@@ -72,14 +72,17 @@ export default {
     },
   },
   mounted() {
-    this.$toast('<strong>i</strong>', {
-      closeButton: {
-        text: 'close',
-        callback(toast) {
-          console.log(toast);
+    this.$toast(
+      'djfioajoiajdjioaejiojewjaewfio dasjfioajewiojioawjeiofjaiojwe f ajeiojiojiof a',
+      {
+        closeButton: {
+          text: 'close',
+          callback(toast) {
+            console.log(toast);
+          },
         },
-      },
-    });
+      }
+    );
   },
 };
 </script>
