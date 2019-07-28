@@ -72,7 +72,14 @@ export default {
     },
   },
   mounted() {
-    this.$toast('fuck that');
+    this.$toast('<strong>i</strong>', {
+      closeButton: {
+        text: 'close',
+        callback(toast) {
+          console.log(toast);
+        },
+      },
+    });
   },
 };
 </script>
